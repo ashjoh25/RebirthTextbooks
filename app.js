@@ -94,28 +94,6 @@ app.get( "/full_list/specific_item/:id", ( req, res ) => {
     // res.sendFile( __dirname + "/views/stuff.html" );
 } );
 
-
-
-
-// // define a route for item DELETE
-// const delete_item_sql = `
-//     DELETE 
-//     FROM
-//         textbooks_list
-//     WHERE
-//         id = ?
-// `
-// app.get("/full_list/specific_item/:id/delete", ( req, res ) => {
-//     db.execute(delete_item_sql, [req.params.id], (error, results) => {
-//         if (error)
-//             res.status(500).send(error); //Internal Server Error
-//         else {
-//             res.redirect("/full_list");
-//         }
-//     });
-// })
-
-
 // define a route for item CREATE
 const create_item_sql = `
     INSERT INTO textbooks_list
