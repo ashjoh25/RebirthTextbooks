@@ -7,56 +7,26 @@
     <title>Full Book List</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <!-- <link rel="stylesheet" type="text/css" href="/full_list.css"> -->
-    <!-- <script src="/animals.js"></script> -->
-    <!-- <script src="/app.js"></script> -->
-
-    <style>
-        body {
-            background-color: #e6c77a;
-        }
-        h1 {
-            color: #2b4b82;
-        }
-        h2 {
-            color: #5594ab;
-        }
-        th {
-            color: #4c80d9;
-        }
-        td {
-            color: #0a1680;
-        }
-
-
-        #searchbar{
-        margin-left: 15%;
-        padding:15px;
-        border-radius: 10px;
-        }
-    </style>
-
-
-<script>
-    function search_book() {
-    let input = document.getElementById('searchbar').value
-    input=input.toLowerCase();
-    let x = document.getElementsByClassName('books');
-      
-    for (i = 0; i < x.length; i++) { 
-        if (!x[i].innerHTML.toLowerCase().includes(input)) {
-            x[i].style.display="none";
-        }
-        else {
-            x[i].style.display="table-cell";     
-        }
-    }
-}
-</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/full_list.css">
+    <script>
+        function search_book() {
+        let input = document.getElementById('searchbar').value
+        input=input.toLowerCase();
+        let x = document.getElementsByClassName('books');
+          
+        for (i = 0; i < x.length; i++) { 
+            if (!x[i].innerHTML.toLowerCase().includes(input)) {
+                x[i].style.display="none";
+            }
+            else {
+                x[i].style.display="table-cell";     
+            }
+        }
+    }
+    </script>
 </head>
 <body>
     <div class="container">
