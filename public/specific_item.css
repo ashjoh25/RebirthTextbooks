@@ -24,7 +24,6 @@ button {
     width: 180px;
     font-family: 'Zilla Slab';
     font-size: 20px;
-    border-radius: 8px;
 }
 
 button:hover {
