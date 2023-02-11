@@ -12,15 +12,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/full_list.css">
     <script>
-        function search_subj() {
-        let input = document.getElementById('searchbar_subj').value
+        function search_book() {
+        let input = document.getElementById('searchbar').value
         input=input.toLowerCase();
         let x = document.getElementsByClassName('books');
-        console.log(x);
           
         for (i = 0; i < x.length; i++) { 
             if (!x[i].innerHTML.toLowerCase().includes(input) && x[i].id=="subject") {
-                while (i.id != "subject") {
+                x[i].style.display="none";
+                i++;
+                while (x[i].id != "subject") {
                     x[i].style.display="none";
                     i++;
                 }
@@ -33,7 +34,7 @@
     </script>
 </head>
 <body>
-    <input id="searchbar_subj" onkeyup="search_subj()" type="text"
+    <input id="searchbar" onkeyup="search_book()" type="text"
     name="search" placeholder="Search by Subject:">
     <div class="container">
         <!-- <input id="searchbar" onkeyup="search_book()" type="text"
