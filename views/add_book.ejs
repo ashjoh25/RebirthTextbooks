@@ -28,26 +28,32 @@
         }
     </style>
 <body>
+
     <div class="container">
+
+        <div class="section">
             <h2>Add Textbook:</h2>
+            <form method="post" action="/full_list">
                 <div class="row">
                     <div class="input-field col s6">
-                        <input type="text" name="title_name" id="nameInput" class="validate" data-length="32" required placeholder="Book Title:">
+                        <label for="nameInput">Titlesssssssssss:</label>
+                        <input type="text" name="title_name" id="nameInput" class="validate" data-length="32" required>
                     </div>
                     <div class="input-field col s6">
-                        <input type="text" name="subject_name" id="nameInput" class="validate" data-length="32" required placeholder="Subject:">
+                        <label for="quantityInput">Subjectssssssssss:</label>
+                        <input type="text" name="subject_name" id="nameInput" class="validate" data-length="32" required> 
                     </div>
                     <div class="input-field col s6">
-                        <input type="text" name="author_name" id="nameInput" class="validate" data-length="32" required placeholder="Author:">
+                        <label for="nameInput">Authorsssssss:</label>
+                        <input type="text" name="author_name" id="nameInput" class="validate" data-length="32" required>
                     </div>
                     <div class="input-field col s6">
-                        <input type="text" name="upload_photo" id="nameInput" class="validate" data-length="32" required placeholder="Upload Photo:">
+                        <label for="nameInput">Usersssssss:</label>
+                        <input type="text" name="user_info" id="nameInput" class="validate" data-length="32" required>
                     </div>
                     <div class="input-field col s6">
-                        <input type="text" name="extra_info" id="nameInput" class="validate" data-length="32" required placeholder="User Info:">
-                    </div>
-                    <div class="input-field col s6">
-                        <input type="text" name="user_info" id="nameInput" class="validate" data-length="32" required placeholder="User Info:">
+                        <label for="nameInput">Extrasssss:</label>
+                        <input type="text" name="extra_info" id="nameInput" class="validate" data-length="32" required>
                     </div>
                 </div>
                 <div style="text-align: center">
@@ -56,6 +62,8 @@
                         Submit
                     </button>
                 </div>
+            </form>
+        </div>
     </div>
 </body>
 </html>

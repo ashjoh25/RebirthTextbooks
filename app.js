@@ -81,7 +81,7 @@ app.get( "/full_list/specific_item/:id", ( req, res ) => {
             res.status(500).send(error); //Internal Server Error
         }
         else if (results.length == 0) {
-            res.status(404).send(`No item found wiht id  = '${req.params.id}'`);
+            res.status(404).send(`No item found with id  = '${req.params.id}'`);
         } 
         else {
             // res.send(results[0]);
@@ -122,7 +122,7 @@ const create_item_sql = `
         (?, ?, ?, ?, ?)
 `
 app.post("/full_list", ( req, res ) => {
-    db.execute(create_item_sql, [req.body.homework_name, req.body.assignment_date, req.body.class_name, req.body.class_description], (error, results) => {
+    db.execute(create_item_sql, [req.body.title_name, req.body.subject_name, req.body.author_name, req.body.user_info, req.body.extra_info], (error, results) => {
         if (error)
             res.status(500).send(error); //Internal Server Error
         else {
