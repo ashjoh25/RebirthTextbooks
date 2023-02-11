@@ -52,16 +52,9 @@ app.get( "/full_list", ( req, res ) => {
     // res.sendFile( __dirname + "/views/list.html" );
 } );
 
-
-const read_new_books_sql = `
-SELECT
-    id, title, subject, author, extra_info
-FROM
-    textbooks_list
-`
 // define a route for the stuff inventory page
-app.get( "/read_book", ( req, res ) => {
-    db.execute(read_new_books_sql, (error,results) => {
+app.get( "/add_book", ( req, res ) => {
+    db.execute(read_stuff_all_sql, (error,results) => {
         if (error) {
             res.status(500).send(error); //Internal Server Error
         }
@@ -76,7 +69,7 @@ const read_item_sql = `
 SELECT
     id, title, subject, author, extra_info
 FROM
-    stuff
+    textbooks_list
 WHERE
     id = ?
 `
@@ -156,7 +149,7 @@ app.post("/full_list", ( req, res ) => {
             res.status(500).send(error); //Internal Server Error
         else {
             //results.insertId has the primary key (id) of the newly inserted element.
-            res.redirect(`/full_list/specific/${results.insertId}`);
+            res.redirect(`/full_list/specific_item/${results.insertId}`);
         }
     });
 })
