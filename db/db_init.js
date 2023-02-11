@@ -28,7 +28,7 @@ const insert_stuff_table_sql = `
     VALUES 
         (?, ?, ?, ?);
 `
-db.execute(insert_stuff_table_sql, ['Chem Webassign', '1/9/23', 'Chemistry', 'ahhh chem']);
+db.execute(insert_stuff_table_sql, ['World History 1', 'History', 'J. Kwon', 'Broken']);
 
 db.execute(insert_stuff_table_sql, ['Infix Calculator', '1/6/23', 'AP CompSci', 'yayay']);
 
