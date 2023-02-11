@@ -34,7 +34,7 @@ app.get( "/", ( req, res ) => {
 
 const read_stuff_all_sql = `
 SELECT
-    id, title, subject
+    id, title, subject, author
 FROM
     textbooks_list
 `
@@ -75,7 +75,7 @@ WHERE
 `
 
 // define a route for the item detail page
-app.get( "/full_list/specific_list/:id", ( req, res ) => {
+app.get( "/full_list/specific_item/:id", ( req, res ) => {
     db.execute(read_item_sql, [req.params.id], (error, results) => {
         if (error) {
             res.status(500).send(error); //Internal Server Error
