@@ -53,6 +53,10 @@
     }
 }
 </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/full_list.css">
 </head>
 <body>
     <div class="container">
@@ -74,11 +78,12 @@
                     <a class="btn-small waves-effect waves-light" href=<%="/full_list/specific_item/" + inventory[i].id %> >
                         More Info
                     </a>
+                    <button onclick=location.href=<%='/full_list/specific_item/' + inventory[i].id %>>More Info</button>
                 </td>
             </tr>
             <% } %>
                 <div class="section">
-                    <a class="btn-small waves-effect waves-light" href="/">Home Page</a>
+                    <button onclick="location.href='/'">Home Page</button>
                 </div>
     </div>
     <script> M.AutoInit();</script>

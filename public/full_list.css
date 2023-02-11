@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* #searchbar{
     margin-left: 50%;
     padding:15px;
@@ -32,3 +33,36 @@
 .books{
    display: list-item;    
   } 
+=======
+body {
+    background-color: #e6c77a;
+    font-family: 'Zilla Slab';
+}
+h1 {
+    color: #661b1b;
+    font-weight: bold;
+}
+th {
+    color: #7f2929;
+}
+td {
+    color: #0a1680;
+}
+
+button {
+    background-color: #7b0200;
+    color: white;
+    border-style: outset;
+    border-color: #2F1000;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 30px;
+    width: 100px;
+    font-family: 'Zilla Slab';
+}
+button:hover {
+    border-style: inset;
+    background-color: #661b1b;
+    border-color: #7b0200;
+}
+>>>>>>> 3fa09354ae287d4748e7eaab8405389602789818

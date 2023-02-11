@@ -1,0 +1,38 @@
+body {
+    background-color: #e6c77a;
+    font-family: 'Zilla Slab';
+    text-align: center;
+    font-size: 2em;
+}
+
+h1 {
+    padding-top: 50px;
+    color: #661b1b;
+    font-size: 32;
+}
+
+button {
+    background-color: #7b0200;
+    color: white;
+    border-style: outset;
+    border-radius: 15px;
+    border-color: #2F1000;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 50px;
+    width: 180px;
+    font-family: 'Zilla Slab';
+    font-size: 20px;
+}
+
+button:hover {
+    background-color:#661b1b;
+    border-color: #7b0200;
+    border-style: inset;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
