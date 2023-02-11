@@ -67,7 +67,7 @@ app.get( "/add_book", ( req, res ) => {
 
 const read_item_sql = `
 SELECT
-    id, title, subject, author, extra_info
+    id, title, subject, author, user_info, extra_info
 FROM
     textbooks_list
 WHERE
@@ -117,9 +117,9 @@ app.get("/full_list/specific_item/:id/delete", ( req, res ) => {
 // define a route for item CREATE
 const create_item_sql = `
     INSERT INTO textbooks_list
-        (title, subject, author, extra_info)
+        (title, subject, author, user_info, extra_info)
     VALUES
-        (?, ?, ?, ?)
+        (?, ?, ?, ?, ?)
 `
 app.post("/full_list", ( req, res ) => {
     db.execute(create_item_sql, [req.body.homework_name, req.body.assignment_date, req.body.class_name, req.body.class_description], (error, results) => {
