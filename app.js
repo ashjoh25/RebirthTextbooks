@@ -74,8 +74,6 @@ FROM
     textbooks_list
 WHERE
     id = ?
-ORDER BY
-    subject
 `
 
 // define a route for the item detail page
