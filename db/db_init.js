@@ -1,7 +1,7 @@
 const db = require("./db_connection");
 /**** Delete existing table, if any ****/
 
-const drop_stuff_table_sql = "DROP TABLE IF EXISTS `stuff`;"
+const drop_stuff_table_sql = "DROP TABLE IF EXISTS `textbooks_list`;"
 
 db.execute(drop_stuff_table_sql);
 
@@ -10,10 +10,10 @@ db.execute(drop_stuff_table_sql);
 const create_stuff_table_sql = `
     CREATE TABLE stuff (
         id INT NOT NULL AUTO_INCREMENT,
-        item VARCHAR(45) NOT NULL,
-        due_date VARCHAR(45) NOT NULL,
-        classes VARCHAR(45) NOT NULL,
-        description VARCHAR(150) NULL,
+        title VARCHAR(45) NOT NULL,
+        subject VARCHAR(45) NOT NULL,
+        author VARCHAR(45) NOT NULL,
+        extra_info VARCHAR(150) NULL,
         PRIMARY KEY (id)
     );
 `
@@ -30,7 +30,7 @@ const insert_stuff_table_sql = `
 `
 db.execute(insert_stuff_table_sql, ['World History 1', 'History', 'J. Kwon', 'Broken']);
 
-db.execute(insert_stuff_table_sql, ['Infix Calculator', '1/6/23', 'AP CompSci', 'yayay']);
+db.execute(insert_stuff_table_sql, ['Intro to Biology', 'Biology', 'R. Bajwa', 'good']);
 
 
 const read_stuff_table_sql = "SELECT * FROM textbooks_list";
