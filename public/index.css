@@ -1,26 +1,47 @@
 html {
-    background-color:#a92e2e;
+    background-color: #7b0200;
 }
 body {
     background-color: #e6c77a;
     width: 1200px;
-    height: 1000px;
+    height: 600px;
     margin: auto;
+    border-radius: 50px;
 }
 h1 {
     color: #661b1b;
     text-align: center;
+    font-size: 50px;
+    padding-top: 50px;
 }
 h2 {
     color: black;
     text-align: center;
+    font-style: italic;
 }
 img {
     height: 200px;
-    width: 200px;
+    width: 300px;
+    margin-left: 450px;
 }
 .center {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+button {
+    background-color: #7b0200;
+    color: white;
+    border-style: outset;
+    border-radius: 15px;
+    border-color: #2F1000;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 50px;
+    width: 100px;
+}
+button:hover {
+    border-style: inset;
+    background-color: #661b1b;
+    border-color: #7b0200;
 }
