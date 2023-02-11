@@ -35,7 +35,8 @@ button:hover, a:hover {
 }
 
 #searchbar{
+  width: 120px;
   margin-left: 15%;
-  padding:15px;
+  padding:5px;
   border-radius: 10px;
   }
