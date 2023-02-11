@@ -1,7 +1,7 @@
 //set up the server
 const express = require( "express" );
 const app = express();
-const port = 9145;
+const port = 9000;
 const logger = require("morgan");
 const db = require("./db/db_connection");
 app.set("views", __dirname + "/views");
