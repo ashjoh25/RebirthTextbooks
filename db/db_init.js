@@ -32,18 +32,15 @@ db.execute(insert_stuff_table_sql, ['World History 1', 'History', 'J. Kwon', 'Br
 
 db.execute(insert_stuff_table_sql, ['Infix Calculator', '1/6/23', 'AP CompSci', 'yayay']);
 
-db.execute(insert_stuff_table_sql, ['Gatsby Essay', '2/3/23', 'AmerLit', 'boooks']);
 
-db.execute(insert_stuff_table_sql, ['American Revolution Presentation', '2/10/23', 'History', 'boop']);
-
-const read_stuff_table_sql = "SELECT * FROM stuff";
+const read_stuff_table_sql = "SELECT * FROM textbooks_list";
 
 db.execute(read_stuff_table_sql, 
     (error, results) => {
         if (error) 
             throw error;
 
-        console.log("Table 'stuff' initialized with:")
+        console.log("Table 'textbooks_list' initialized with:")
         console.log(results);
     }
 );
