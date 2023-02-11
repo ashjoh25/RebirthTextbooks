@@ -34,3 +34,8 @@ button:hover, a:hover {
     border-color: #7b0200 !important;
 }
 
+#searchbar{
+  margin-left: 15%;
+  padding:15px;
+  border-radius: 10px;
+  }

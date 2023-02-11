@@ -11,6 +11,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/full_list.css">
+    <script>
+        function search_book() {
+        let input = document.getElementById('searchbar').value
+        input=input.toLowerCase();
+        let x = document.getElementsByClassName('books');
+          
+        for (i = 0; i < x.length; i++) { 
+            if (!x[i].innerHTML.toLowerCase().includes(input)) {
+                x[i].style.display="none";
+            }
+            else {
+                x[i].style.display="table-cell";     
+            }
+        }
+    }
+    </script>
 </head>
 <body>
     <div class="container">
@@ -25,9 +41,9 @@
             </th>
             <% for (let i = 0; i < inventory.length; i++) { %>
             <tr>
-                <td class = "book"><%=inventory[i].title%></td>
-                <td><%=inventory[i].subject%></td>
-                <td><%=inventory[i].author%></td>
+                <td class="books"><%=inventory[i].title%></td>
+                <td class="books"><%=inventory[i].subject%></td>
+                <td class="books"><%=inventory[i].author%></td>
                 <td>
                     <a class="btn-small waves-effect waves-light" href=<%="/full_list/specific_item/" + inventory[i].id %> >
                         More Info
@@ -39,8 +55,7 @@
                     <button onclick="location.href='/'">Home Page</button>
                 </div>
     </div>
-
     <script> M.AutoInit();</script>
-
+    <!-- <script src="/full_list.js"></script> -->
 </body>
 </html>
