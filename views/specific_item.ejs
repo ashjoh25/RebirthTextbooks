@@ -10,79 +10,32 @@
     <div class="container">
         <div class="section flow-text" id="stuffDetail">
             <h1>Book Details:</h1>
-            <a class="btn-small waves-effect waves-light" href="/list">Full List
+            <a class="btn-small waves-effect waves-light" href="/full_list">Full List
                 <i class="material-icons left">arrow_back</i>
             </a>
             <table>
                 <tr>
                     <th>Title:</th>
-                    <td>title</td>
+                    <td><%=title%></td>
                 </tr>
                 <tr>
                     <th>Subject:</th>
-                    <td>subject</td>
+                    <td><%=subject%></td>
                 </tr>
                 <tr>
                     <th>Author:</th>
-                    <td>author</td>
+                    <td><%=author%></td>
                 </tr>
                 <tr>
                     <th>User Info:</th>
-                    <td>user_info</td>
+                    <td><%=user_info%></td>
                 </tr>
                 <tr>
                     <th>Additional Info:</th>
-                    <td>additional_info</td>
+                    <td><%=extra_info%></td>
                 </tr>
             </table>
         </div>
-
-        <div class="section" id="stuffControls">
-            <a class="btn-large waves-effect waves-light orange left modal-trigger" href="#stuffEdit">
-                <i class="material-icons right">edit</i>
-                Edit
-            </a>
-            <a class="btn-large waves-effect waves-light red right" href="/list/stuff/<%=id%>/delete">
-                <i class="material-icons right">delete</i>
-                Delete
-            </a>
-        </div>
-
-        <div class="modal" id="stuffEdit">
-
-            <div class="modal-content">
-
-                <h2>Edit Information:</h2>
-                <form method="post" action="/list/stuff/<%=id%>"> <!-- default action is the page's URL --> 
-                    <div class="row">
-                        <div class="input-field col s6">
-                            <label for="nameInput">Book Title:</label>
-                            <input type="text" name="book_title" id="nameInput" class="validate" value="title" data-length="32" required>
-                        </div>
-                        <div class="input-field col s6">
-                            <label for="quantityInput">Subject:</label>
-                            <input type="text" name="class_subject" id="nameInput" class="validate" value="subject" data-length="32" required> 
-                        </div>
-                        <div class="input-field col s6">
-                            <label for="nameInput">Author:</label>
-                            <input type="text" name="class_name" id="nameInput" class="validate" value="author" data-length="32" required>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <label for="descriptionInput">Assignment Description:</label>
-                            <input type="text" name="class_description" id="descriptionInput" value="<%=description%>" data-length="100">
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button class="btn waves-effect waves-light " type="submit">
-                            <i class="material-icons right">send</i>
-                            Submit
-                        </button>
-                        <button class="modal-close waves-effect waves-green btn-flat">Never Mind</button>
-                    </div>
-                </form>
-            </div>
 
         </div>
     </div>

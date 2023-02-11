@@ -1,7 +1,7 @@
 //set up the server
 const express = require( "express" );
 const app = express();
-const port = 9145;
+const port = 9000;
 const logger = require("morgan");
 const db = require("./db/db_connection");
 app.set("views", __dirname + "/views");
@@ -34,7 +34,7 @@ app.get( "/", ( req, res ) => {
 
 const read_stuff_all_sql = `
 SELECT
-    id, title, subject
+    id, title, subject, author
 FROM
     textbooks_list
 `
@@ -46,7 +46,20 @@ app.get( "/full_list", ( req, res ) => {
             res.status(500).send(error); //Internal Server Error
         }
         else {
-            res.render('list', {inventory: results});
+            res.render('full_list', {inventory: results});
+        }
+    })
+    // res.sendFile( __dirname + "/views/list.html" );
+} );
+
+// define a route for the stuff inventory page
+app.get( "/add_book", ( req, res ) => {
+    db.execute(read_stuff_all_sql, (error,results) => {
+        if (error) {
+            res.status(500).send(error); //Internal Server Error
+        }
+        else {
+            res.render('add_book', {inventory: results});
         }
     })
     // res.sendFile( __dirname + "/views/list.html" );
@@ -56,13 +69,13 @@ const read_item_sql = `
 SELECT
     id, title, subject, author, extra_info
 FROM
-    stuff
+    textbooks_list
 WHERE
     id = ?
 `
 
 // define a route for the item detail page
-app.get( "/full_list/specific_list/:id", ( req, res ) => {
+app.get( "/full_list/specific_item/:id", ( req, res ) => {
     db.execute(read_item_sql, [req.params.id], (error, results) => {
         if (error) {
             res.status(500).send(error); //Internal Server Error
@@ -100,28 +113,6 @@ app.get("/full_list/specific_item/:id/delete", ( req, res ) => {
     });
 })
 
-// define a route for item UPDATE
-const update_item_sql = `
-    UPDATE
-        textbooks_list
-    SET
-        title = ?,
-        subject = ?,
-        author = ?,
-        extra_info = ?
-    WHERE
-        id = ?
-`
-app.post("/full_list/specific_item/:id", ( req, res ) => {
-    console.log(req.body);
-    db.execute(update_item_sql, [req.body.homework_name, req.body.assignment_date, req.body.class_name, req.body.class_description, req.params.id], (error, results) => {
-        if (error)
-            res.status(500).send(error); //Internal Server Error
-        else {
-            res.redirect(`/full_list/specific_item/${req.params.id}`);
-        }
-    });
-})
 
 // define a route for item CREATE
 const create_item_sql = `
@@ -136,7 +127,7 @@ app.post("/full_list", ( req, res ) => {
             res.status(500).send(error); //Internal Server Error
         else {
             //results.insertId has the primary key (id) of the newly inserted element.
-            res.redirect(`/full_list/specific/${results.insertId}`);
+            res.redirect(`/full_list/specific_item/${results.insertId}`);
         }
     });
 })

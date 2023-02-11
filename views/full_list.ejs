@@ -34,16 +34,18 @@
                 <th>Subject</th>
                 <th>Author</th>
             </th>
+            <% for (let i = 0; i < inventory.length; i++) { %>
             <tr>
-                <td>hello</td>
-                <td>goodbye</td>
+                <td><%=inventory[i].title%></td>
+                <td><%=inventory[i].subject%></td>
+                <td><%=inventory[i].author%></td>
                 <td>
-                    <a class="btn-small waves-effect waves-light" href="/full_list/specific_item"> >
+                    <a class="btn-small waves-effect waves-light" href=<%="/full_list/specific_item/" + inventory[i].id %> >
                         More Info
                     </a>
                 </td>
             </tr>
-
+            <% } %>
                 <div class="section">
                     <a class="btn-small waves-effect waves-light" href="/">Home Page</a>
                 </div>
