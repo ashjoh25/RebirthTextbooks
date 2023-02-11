@@ -16,10 +16,14 @@
         let input = document.getElementById('searchbar').value
         input=input.toLowerCase();
         let x = document.getElementsByClassName('books');
+        console.log(x);
           
         for (i = 0; i < x.length; i++) { 
-            if (!x[i].innerHTML.toLowerCase().includes(input)) {
-                x[i].style.display="none";
+            if (!x[i].innerHTML.toLowerCase().includes(input) && x[i].id=="title") {
+                while (i.id != "title") {
+                    x[i].style.display="none";
+                    i++;
+                }
             }
             else {
                 x[i].style.display="table-cell";     
@@ -45,7 +49,7 @@
             </th>
             <% for (let i = 0; i < inventory.length; i++) { %>
             <tr>
-                <td class="books"><%=inventory[i].title%></td>
+                <td id="title" class="books"><%=inventory[i].title%></td>
                 <td class="books"><%=inventory[i].subject%></td>
                 <td class="books"><%=inventory[i].author%></td>
                 <td>
