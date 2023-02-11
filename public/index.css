@@ -1,6 +1,7 @@
 html {
     background-color: #7b0200;
 }
+
 body {
     background-color: rgb(235, 187, 122);
     width: 1200px;
@@ -9,27 +10,32 @@ body {
     border-radius: 50px;
     font-family: 'Zilla Slab';
 }
+
 h1 {
     color: #661b1b;
     text-align: center;
     font-size: 50px;
     padding-top: 50px;
 }
+
 h2 {
     color: black;
     text-align: center;
     font-style: italic;
 }
+
 img {
     height: 200px;
     width: 300px;
     margin-left: 450px;
 }
+
 .center {
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
+
 button {
     background-color: #7b0200;
     color: white;
@@ -43,6 +49,7 @@ button {
     font-family: 'Zilla Slab';
     box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
 }
+
 button:hover {
     border-style: inset;
     background-color: #661b1b;

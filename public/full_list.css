@@ -1,20 +1,33 @@
+html {
+    background-color: #7b0200;
+}
+
 body {
     background-color: rgb(235, 187, 122);
+    width: 1400px;
+    height: 1000px;
+    margin: auto;
     font-family: 'Zilla Slab';
+    border: solid rgb(165, 132, 86);
+    border-width: 12px;
 }
+
 h1 {
     color: #661b1b;
     font-weight: bold;
 }
+
 th {
     color: #7f2929;
     width: 150px !important;
 }
+
 td {
     color: black;
 }
 
-button, a {
+button,
+a {
     background-color: #7b0200 !important;
     color: white !important;
     border-style: outset !important;
@@ -28,14 +41,32 @@ button, a {
     font-family: 'Zilla Slab' !important;
     box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
 }
-button:hover, a:hover {
+
+button:hover,
+a:hover {
     border-style: inset !important;
     background-color: #661b1b !important;
     border-color: #7b0200 !important;
 }
 
-#searchbar{
-  margin-left: 15%;
-  padding:15px;
-  border-radius: 10px;
-  }
+#searchbar {
+    margin-left: 15%;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: #4f0100;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(165, 132, 86);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(138, 110, 72);
+}

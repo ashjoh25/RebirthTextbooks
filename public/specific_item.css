@@ -28,7 +28,7 @@ button {
 }
 
 button:hover {
-    background-color:#661b1b;
+    background-color: #661b1b;
     border-color: #7b0200;
     border-style: inset;
 }
