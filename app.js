@@ -46,7 +46,7 @@ app.get( "/full_list", ( req, res ) => {
             res.status(500).send(error); //Internal Server Error
         }
         else {
-            res.render('list', {inventory: results});
+            res.render('full_list', {inventory: results});
         }
     })
     // res.sendFile( __dirname + "/views/list.html" );
