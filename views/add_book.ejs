@@ -28,24 +28,25 @@
         }
     </style>
 <body>
-    <div class="container">
+    <!-- <div class="container">
             <h2>Add Textbook:</h2>
             <form method="post" action="/full_list">
                 <div class="row">
                     <div class="input-field col s6">
-                        <input type="text" name="title_name" id="nameInput" class="validate" value="<%=inventory[i].title%>" data-length="32" required>
+                        <label for="nameInput">Book Title:</label>
+                        <input type="text" name="title_name" id="nameInput" class="validate" value="" data-length="32" required>
                     </div>
                     <div class="input-field col s6">
-                        <input type="text" name="subject_name" id="nameInput" class="validate" data-length="32" value="<%=subject%>" required>
+                        <input type="text" name="subject_name" id="nameInput" class="validate" value="" data-length="32" required>
                     </div>
                     <div class="input-field col s6">
-                        <input type="text" name="author_name" id="nameInput" class="validate" data-length="32" value="<%=author%>" required>
+                        <input type="text" name="author_name" id="nameInput" class="validate" value="" data-length="32" required>
                     </div>
                     <div class="input-field col s6">
-                        <input type="text" name="extra_info" id="nameInput" class="validate" data-length="150" value="<%=extra_info%>" required>
+                        <input type="text" name="extra_info" id="nameInput" class="validate" value="" data-length="150" required>
                     </div>
                     <div class="input-field col s6">
-                        <input type="text" name="user_info" id="nameInput" class="validate" data-length="32" value="<%=user_info%>" required>
+                        <input type="text" name="user_info" id="nameInput" class="validate" value="" data-length="32" required>
                     </div>
                 </div>
                 <div style="text-align: center">
@@ -55,6 +56,43 @@
                     </button>
                 </div>
             </form>
+    </div> -->
+
+    <div class="container">
+
+        <div class="section">
+            <h2>Add Boook:</h2>
+            <form method="post" action="/full_list">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <label for="nameInput">Titlesssssssssss:</label>
+                        <input type="text" name="title_name" id="nameInput" class="validate" data-length="32" required>
+                    </div>
+                    <div class="input-field col s6">
+                        <label for="quantityInput">Subjectssssssssss:</label>
+                        <input type="text" name="subject_name" id="nameInput" class="validate" data-length="32" required> 
+                    </div>
+                    <div class="input-field col s6">
+                        <label for="nameInput">Authorsssssss:</label>
+                        <input type="text" name="author_name" id="nameInput" class="validate" data-length="32" required>
+                    </div>
+                    <div class="input-field col s6">
+                        <label for="nameInput">Usersssssss:</label>
+                        <input type="text" name="user_info" id="nameInput" class="validate" data-length="32" required>
+                    </div>
+                    <div class="input-field col s6">
+                        <label for="nameInput">Extrasssss:</label>
+                        <input type="text" name="extra_info" id="nameInput" class="validate" data-length="32" required>
+                    </div>
+                </div>
+                <div style="text-align: center">
+                    <button class="btn waves-effect waves-light" type="submit" >
+                        <i class="material-icons right">send</i>
+                        Submit
+                    </button>
+                </div>
+            </form>
+        </div>
     </div>
 </body>
 </html>
