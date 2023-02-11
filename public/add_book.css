@@ -1,0 +1,39 @@
+body {
+    background-color: rgb(235, 187, 122);
+    font-family: 'Zilla Slab';
+}
+h2 {
+    color: #661b1b;
+    font-weight: bold;
+}
+
+input {
+    color: black;
+}
+
+button {
+    background-color: #7b0200 !important;
+    color: white !important;
+    border-style: outset !important;
+    border-color: #2F1000 !important;
+    border-radius: 8px !important;
+    vertical-align: auto !important;
+    padding: 0px !important;
+    text-transform: none !important;
+    height: 40px !important;
+    width: 100px !important;
+    font-family: 'Zilla Slab' !important;
+    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
+}
+
+button:hover {
+    border-style: inset !important;
+    background-color: #661b1b !important;
+    border-color: #7b0200 !important;
+}
+
+::placeholder, p1 {
+    color: rgb(92, 92, 92);
+    font-style: italic;
+    font-family: 'Zilla Slab';
+}
