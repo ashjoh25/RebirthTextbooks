@@ -49,11 +49,12 @@ a:hover {
     border-color: #7b0200 !important;
 }
 
-#searchbar {
+#searchbar{
+    width: 120px;
     margin-left: 15%;
-    padding: 15px;
+    padding:5px;
     border-radius: 10px;
-}
+    }
 
 ::-webkit-scrollbar {
     width: 15px;

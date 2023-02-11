@@ -16,6 +16,9 @@
         let input = document.getElementById('searchbar').value
         input=input.toLowerCase();
         let x = document.getElementsByClassName('books');
+        let y = document.getElementsByClassName('subject');
+        let z = document.getElementsByClassName('author');
+
           
         for (i = 0; i < x.length; i++) { 
             if (!x[i].innerHTML.toLowerCase().includes(input)) {
@@ -25,13 +28,33 @@
                 x[i].style.display="table-cell";     
             }
         }
+        for (i = 0; i < y.length; i++) { 
+            if (!y[i].innerHTML.toLowerCase().includes(input)) {
+                y[i].style.display="none";
+            }
+            else {
+                y[i].style.display="table-cell";     
+            }
+        }
+        for (i = 0; i < x.length; i++) { 
+            if (!z[i].innerHTML.toLowerCase().includes(input)) {
+                z[i].style.display="none";
+            }
+            else {
+                z[i].style.display="table-cell";     
+            }
+        }
     }
     </script>
 </head>
 <body>
     <div class="container">
         <input id="searchbar" onkeyup="search_book()" type="text"
-        name="search" placeholder="Search for books:">
+        name="search" placeholder="Search by Title:">
+        <input id="searchbar" onkeyup="search_book()" type="text"
+        name="search" placeholder="Search by Subject:">
+        <input id="searchbar" onkeyup="search_book()" type="text"
+        name="search" placeholder="Search by Author:">
         <h1>Book List </h1>
         <table>
             <tr>
@@ -42,8 +65,8 @@
             <% for (let i = 0; i < inventory.length; i++) { %>
             <tr>
                 <td class="books"><%=inventory[i].title%></td>
-                <td class="books"><%=inventory[i].subject%></td>
-                <td class="books"><%=inventory[i].author%></td>
+                <td class="subject"><%=inventory[i].subject%></td>
+                <td class="author"><%=inventory[i].author%></td>
                 <td>
                     <a class="btn-small waves-effect waves-light" href=<%="/full_list/specific_item/" + inventory[i].id %> >
                         More Info
