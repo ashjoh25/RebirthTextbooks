@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* #searchbar{
     margin-left: 50%;
     padding:15px;
@@ -33,7 +32,6 @@
 .books{
    display: list-item;    
   } 
-=======
 body {
     background-color: #e6c77a;
     font-family: 'Zilla Slab';
@@ -65,4 +63,3 @@ button:hover {
     background-color: #661b1b;
     border-color: #7b0200;
 }
->>>>>>> 3fa09354ae287d4748e7eaab8405389602789818
