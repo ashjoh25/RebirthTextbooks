@@ -8,7 +8,7 @@ db.execute(drop_stuff_table_sql);
 /**** Create "stuff" table (again)  ****/
 
 const create_stuff_table_sql = `
-    CREATE TABLE stuff (
+    CREATE TABLE textbooks_list (
         id INT NOT NULL AUTO_INCREMENT,
         title VARCHAR(45) NOT NULL,
         subject VARCHAR(45) NOT NULL,
@@ -23,7 +23,7 @@ db.execute(create_stuff_table_sql);
 /**** Create some sample items ****/
 
 const insert_stuff_table_sql = `
-    INSERT INTO stuff 
+    INSERT INTO textbooks_list 
         (title, subject, author, extra_info) 
     VALUES 
         (?, ?, ?, ?);
