@@ -30,32 +30,31 @@
 <body>
     <div class="container">
             <h2>Add Textbook:</h2>
+            <form method="post" action="/full_list">
                 <div class="row">
                     <div class="input-field col s6">
-                        <input type="text" name="title_name" id="nameInput" class="validate" data-length="32" required placeholder="Book Title:">
+                        <input type="text" name="title_name" id="nameInput" class="validate" value="<%=inventory[i].title%>" data-length="32" required>
                     </div>
                     <div class="input-field col s6">
-                        <input type="text" name="subject_name" id="nameInput" class="validate" data-length="32" required placeholder="Subject:">
+                        <input type="text" name="subject_name" id="nameInput" class="validate" data-length="32" value="<%=subject%>" required>
                     </div>
                     <div class="input-field col s6">
-                        <input type="text" name="author_name" id="nameInput" class="validate" data-length="32" required placeholder="Author:">
+                        <input type="text" name="author_name" id="nameInput" class="validate" data-length="32" value="<%=author%>" required>
                     </div>
                     <div class="input-field col s6">
-                        <input type="text" name="upload_photo" id="nameInput" class="validate" data-length="32" required placeholder="Upload Photo:">
+                        <input type="text" name="extra_info" id="nameInput" class="validate" data-length="150" value="<%=extra_info%>" required>
                     </div>
                     <div class="input-field col s6">
-                        <input type="text" name="extra_info" id="nameInput" class="validate" data-length="32" required placeholder="User Info:">
-                    </div>
-                    <div class="input-field col s6">
-                        <input type="text" name="user_info" id="nameInput" class="validate" data-length="32" required placeholder="User Info:">
+                        <input type="text" name="user_info" id="nameInput" class="validate" data-length="32" value="<%=user_info%>" required>
                     </div>
                 </div>
                 <div style="text-align: center">
-                    <button class="btn waves-effect waves-light" type="submit" >
+                    <button class="btn waves-effect waves-light" type="submit" onclick="location.href='/full_list'">
                         <i class="material-icons right">send</i>
                         Submit
                     </button>
                 </div>
+            </form>
     </div>
 </body>
 </html>
