@@ -86,16 +86,16 @@ app.get( "/full_list/specific_list/:id", ( req, res ) => {
 const delete_item_sql = `
     DELETE 
     FROM
-        stuff
+        textbooks_list
     WHERE
         id = ?
 `
-app.get("/list/stuff/:id/delete", ( req, res ) => {
+app.get("/full_list/specific_item/:id/delete", ( req, res ) => {
     db.execute(delete_item_sql, [req.params.id], (error, results) => {
         if (error)
             res.status(500).send(error); //Internal Server Error
         else {
-            res.redirect("/list");
+            res.redirect("/full_list");
         }
     });
 })
@@ -103,40 +103,40 @@ app.get("/list/stuff/:id/delete", ( req, res ) => {
 // define a route for item UPDATE
 const update_item_sql = `
     UPDATE
-        stuff
+        textbooks_list
     SET
-        item = ?,
-        due_date = ?,
-        classes = ?,
-        description = ?
+        title = ?,
+        subject = ?,
+        author = ?,
+        extra_info = ?
     WHERE
         id = ?
 `
-app.post("/list/stuff/:id", ( req, res ) => {
+app.post("/full_list/specific_item/:id", ( req, res ) => {
     console.log(req.body);
     db.execute(update_item_sql, [req.body.homework_name, req.body.assignment_date, req.body.class_name, req.body.class_description, req.params.id], (error, results) => {
         if (error)
             res.status(500).send(error); //Internal Server Error
         else {
-            res.redirect(`/list/stuff/${req.params.id}`);
+            res.redirect(`/full_list/specific_item/${req.params.id}`);
         }
     });
 })
 
 // define a route for item CREATE
 const create_item_sql = `
-    INSERT INTO stuff
-        (item, due_date, classes, description)
+    INSERT INTO textbooks_list
+        (title, subject, author, extra_info)
     VALUES
         (?, ?, ?, ?)
 `
-app.post("/list", ( req, res ) => {
+app.post("/full_list", ( req, res ) => {
     db.execute(create_item_sql, [req.body.homework_name, req.body.assignment_date, req.body.class_name, req.body.class_description], (error, results) => {
         if (error)
             res.status(500).send(error); //Internal Server Error
         else {
             //results.insertId has the primary key (id) of the newly inserted element.
-            res.redirect(`/list/stuff/${results.insertId}`);
+            res.redirect(`/full_list/specific/${results.insertId}`);
         }
     });
 })
