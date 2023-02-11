@@ -50,8 +50,8 @@
             <% for (let i = 0; i < inventory.length; i++) { %>
             <tr>
                 <td id="subject" class="books"><%=inventory[i].subject%></td>
-                <td id="title" class="books"><%=inventory[i].title%></td>
-                <td id="author" class="books"><%=inventory[i].author%></td>
+                <td class="books"><%=inventory[i].title%></td>
+                <td class="books"><%=inventory[i].author%></td>
                 <td>
                     <a class="books" href=<%="/full_list/specific_item/" + inventory[i].id %> >
                         More Info
