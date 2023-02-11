@@ -7,6 +7,21 @@ h2 {
     font-weight: bold;
 }
 
+html {
+    background-color: #7b0200;
+}
+
+body {
+    background-color: rgb(220, 187, 122);
+    width: 75%;
+    height: 700px;
+    margin: auto;
+    font-family: 'Zilla Slab';
+    border: solid rgb(202, 161, 104);
+    border-width: 12px;
+}
+
+
 input {
     color: black;
 }
