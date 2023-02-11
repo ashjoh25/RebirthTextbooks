@@ -51,10 +51,11 @@ a:hover {
 
 #searchbar{
     width: 120px;
-    margin-right: 100%;
+    margin-left: 15%;
     padding:5px;
     border-radius: 10px;
-    }
+    margin-left: 900px;
+}
 
 ::-webkit-scrollbar {
     width: 15px;
