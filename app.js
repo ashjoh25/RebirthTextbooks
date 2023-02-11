@@ -81,7 +81,7 @@ app.get( "/full_list/specific_item/:id", ( req, res ) => {
             res.status(500).send(error); //Internal Server Error
         }
         else if (results.length == 0) {
-            res.status(404).send(`No item found wiht id  = '${req.params.id}'`);
+            res.status(404).send(`No item found with id  = '${req.params.id}'`);
         } 
         else {
             // res.send(results[0]);
