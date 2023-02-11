@@ -1,0 +1,26 @@
+html {
+    background-color:#a92e2e;
+}
+body {
+    background-color: #e6c77a;
+    width: 1200px;
+    height: 1000px;
+    margin: auto;
+}
+h1 {
+    color: #661b1b;
+    text-align: center;
+}
+h2 {
+    color: black;
+    text-align: center;
+}
+img {
+    height: 200px;
+    width: 200px;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
