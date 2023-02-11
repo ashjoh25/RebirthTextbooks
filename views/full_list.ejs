@@ -12,15 +12,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/full_list.css">
     <script>
-        function search_book() {
-        let input = document.getElementById('searchbar').value
+        function search_subj() {
+        let input = document.getElementById('searchbar_subj').value
         input=input.toLowerCase();
         let x = document.getElementsByClassName('books');
         console.log(x);
           
         for (i = 0; i < x.length; i++) { 
-            if (!x[i].innerHTML.toLowerCase().includes(input) && x[i].id=="title") {
-                while (i.id != "title") {
+            if (!x[i].innerHTML.toLowerCase().includes(input) && x[i].id=="subject") {
+                while (i.id != "subject") {
                     x[i].style.display="none";
                     i++;
                 }
@@ -33,7 +33,7 @@
     </script>
 </head>
 <body>
-    <input id="searchbar" onkeyup="search_book()" type="text"
+    <input id="searchbar_subj" onkeyup="search_subj()" type="text"
     name="search" placeholder="Search by Title:">
     <div class="container">
         <!-- <input id="searchbar" onkeyup="search_book()" type="text"
@@ -43,24 +43,24 @@
         <h1>Book List </h1>
         <table>
             <tr>
-                <th>Title</th>
                 <th>Subject</th>
+                <th>Title</th>
                 <th>Author</th>
             </th>
             <% for (let i = 0; i < inventory.length; i++) { %>
             <tr>
+                <td id="subject" class="books"><%=inventory[i].subject%></td>
                 <td id="title" class="books"><%=inventory[i].title%></td>
-                <td class="books"><%=inventory[i].subject%></td>
-                <td class="books"><%=inventory[i].author%></td>
+                <td id="author" class="books"><%=inventory[i].author%></td>
                 <td>
-                    <a class="btn-small waves-effect waves-light" href=<%="/full_list/specific_item/" + inventory[i].id %> >
+                    <a class="books" href=<%="/full_list/specific_item/" + inventory[i].id %> >
                         More Info
                     </a>
                 </td>
             </tr>
             <% } %>
                 <div class="section">
-                    <button onclick="location.href='/'">Home Page</button>
+                    <button id="button" onclick="location.href='/'">Home Page</button>
                 </div>
     </div>
     <script> M.AutoInit();</script>

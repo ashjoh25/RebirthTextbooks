@@ -37,6 +37,8 @@ SELECT
     id, title, subject, author
 FROM
     textbooks_list
+ORDER BY
+    subject
 `
 
 // define a route for the stuff inventory page
@@ -72,6 +74,8 @@ FROM
     textbooks_list
 WHERE
     id = ?
+ORDER BY
+    subject
 `
 
 // define a route for the item detail page
