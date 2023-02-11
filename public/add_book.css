@@ -22,8 +22,9 @@ button {
     text-transform: none !important;
     height: 40px !important;
     width: 100px !important;
+    margin-top: 5px;
+    margin-left: 100px;
     font-family: 'Zilla Slab' !important;
-    border-radius: 8px;
 }
 
 button:hover {
