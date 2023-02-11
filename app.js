@@ -97,23 +97,23 @@ app.get( "/full_list/specific_item/:id", ( req, res ) => {
 
 
 
-// define a route for item DELETE
-const delete_item_sql = `
-    DELETE 
-    FROM
-        textbooks_list
-    WHERE
-        id = ?
-`
-app.get("/full_list/specific_item/:id/delete", ( req, res ) => {
-    db.execute(delete_item_sql, [req.params.id], (error, results) => {
-        if (error)
-            res.status(500).send(error); //Internal Server Error
-        else {
-            res.redirect("/full_list");
-        }
-    });
-})
+// // define a route for item DELETE
+// const delete_item_sql = `
+//     DELETE 
+//     FROM
+//         textbooks_list
+//     WHERE
+//         id = ?
+// `
+// app.get("/full_list/specific_item/:id/delete", ( req, res ) => {
+//     db.execute(delete_item_sql, [req.params.id], (error, results) => {
+//         if (error)
+//             res.status(500).send(error); //Internal Server Error
+//         else {
+//             res.redirect("/full_list");
+//         }
+//     });
+// })
 
 
 // define a route for item CREATE
@@ -148,9 +148,3 @@ function search_book() {
         }
     }
 }
-// const insert_stuff_table_sql = `
-//     INSERT INTO stuff
-//         (item, due_date)
-//     VALUES
-//         (?, ?)
-// `
