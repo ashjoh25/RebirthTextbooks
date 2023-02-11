@@ -3,12 +3,12 @@ html {
 }
 
 body {
-    background-color: rgb(235, 187, 122);
-    width: 1400px;
+    background-color: rgb(220, 187, 122);
+    width: 75%;
     height: 1000px;
     margin: auto;
     font-family: 'Zilla Slab';
-    border: solid rgb(165, 132, 86);
+    border: solid rgb(202, 161, 104);
     border-width: 12px;
 }
 
