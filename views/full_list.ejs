@@ -14,7 +14,9 @@
 </head>
 <body>
     <div class="container">
-        <h1>Book List</h1>
+        <input id="searchbar" onkeyup="search_book()" type="text"
+        name="search" placeholder="Search for books:">
+        <h1>Book List </h1>
         <table>
             <tr>
                 <th>Title</th>
@@ -23,7 +25,7 @@
             </th>
             <% for (let i = 0; i < inventory.length; i++) { %>
             <tr>
-                <td><%=inventory[i].title%></td>
+                <td class = "book"><%=inventory[i].title%></td>
                 <td><%=inventory[i].subject%></td>
                 <td><%=inventory[i].author%></td>
                 <td>
