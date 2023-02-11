@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/specific_item.css">
     <title>Book Details</title>
 </head>
 <body>
     <div class="container">
         <div class="section flow-text" id="stuffDetail">
             <h1>Book Details:</h1>
-            <a class="btn-small waves-effect waves-light" href="/full_list">Full List
-                <i class="material-icons left">arrow_back</i>
-            </a>
             <table>
                 <tr>
                     <th>Title:</th>
@@ -35,6 +36,7 @@
                     <td><%=extra_info%></td>
                 </tr>
             </table>
+            <button onclick="location.href='/full_list'">Return to full list</button>
         </div>
 
         </div>
